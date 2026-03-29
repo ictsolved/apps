@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site.company_name }} Apps</title>
+  <meta name="description" content="{{ site.company_tagline }}">
+  {% include seo.html %}
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{ '/main.css' | relative_url }}">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #f5f7f5; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1a1a1a; }
+
+    /* ── Top nav ── */
+    .topNav {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+      padding: 18px 32px;
+      z-index: 10;
+    }
+    .topNav a {
+      color: rgba(255,255,255,0.85);
+      font-size: 1.35rem;
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.25);
+      transition: background 0.2s, color 0.2s;
+    }
+    .topNav a:hover { background: rgba(255,255,255,0.18); color: #fff; }
+
+    /* ── Hero ── */
+    .hero {
+      position: relative;
+      background: linear-gradient(150deg, #1B5E20 0%, #2E7D32 45%, #43A047 100%);
+      padding: 100px 24px 72px;
+      text-align: center;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 80% 20%, rgba(255,255,255,0.07) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 40% at 10% 80%, rgba(0,0,0,0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .heroInner { position: relative; max-width: 680px; margin: 0 auto; }
+    .heroBrand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 32px;
+      padding: 6px 18px 6px 10px;
+      margin-bottom: 28px;
+    }
+    .heroBrand .dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: #a5d6a7;
+    }
+    .heroBrand span {
+      color: rgba(255,255,255,0.9);
+      font-size: 1.2rem;
+      letter-spacing: 0.04em;
+      font-weight: 500;
+    }
+    .hero h1 {
+      color: #fff;
+      font-size: clamp(3.2rem, 7vw, 5.2rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+    .hero h1 span { color: #a5d6a7; }
+    .hero p {
+      color: rgba(255,255,255,0.78);
+      font-size: clamp(1.5rem, 2.5vw, 1.8rem);
+      line-height: 1.6;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    /* ── Wave divider ── */
+    .heroWave { display: block; margin-top: -2px; background: #f5f7f5; }
+
+    /* ── Section label ── */
+    .sectionLabel {
+      max-width: 1100px;
+      margin: 48px auto 20px;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .sectionLabel h2 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #555;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+    }
+    .sectionLabel .line { flex: 1; height: 1px; background: #dde4dd; }
+
+    /* ── Apps grid ── */
+    .appsGrid {
+      max-width: 1100px;
+      margin: 0 auto 64px;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 28px;
+    }
+
+    /* ── App card ── */
+    .appCard {
+      background: #fff;
+      border-radius: 20px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06), 0 4px 20px rgba(0,0,0,0.05);
+      border: 1px solid rgba(0,0,0,0.04);
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+      position: relative;
+      cursor: pointer;
+    }
+    .appCard:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(27,94,32,0.13), 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .cardHeader {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .cardIcon {
+      width: 64px; height: 64px;
+      border-radius: 14px;
+      object-fit: cover;
+      flex-shrink: 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+    }
+    .cardMeta { min-width: 0; }
+    .cardMeta h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #111;
+      line-height: 1.2;
+      margin-bottom: 4px;
+    }
+    .cardBadges {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .cardBadge {
+      font-size: 1.05rem;
+      padding: 2px 9px;
+      border-radius: 20px;
+      background: #e8f5e9;
+      color: #2E7D32;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .cardTagline {
+      font-size: 1.4rem;
+      color: #555;
+      line-height: 1.6;
+      flex: 1;
+      margin-bottom: 22px;
+    }
+    .cardActions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: auto;
+    }
+    .cardLearnMore {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #2E7D32;
+      color: #fff !important;
+      padding: 9px 22px;
+      border-radius: 24px;
+      font-size: 1.35rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.18s;
+    }
+    /* Pseudo-element makes the whole card clickable */
+    .cardLearnMore::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 20px;
+    }
+    .appCard:hover .cardLearnMore { background: #1B5E20; }
+    .cardLearnMore i { font-size: 1.1rem; }
+    .cardPrivacy {
+      font-size: 1.25rem;
+      color: #999;
+      text-decoration: none;
+      position: relative;
+      z-index: 1;
+    }
+    .cardPrivacy:hover { color: #555; }
+
+    /* ── Footer ── */
+    .homeFooter {
+      text-align: center;
+      padding: 32px 20px 48px;
+      border-top: 1px solid #e8ede8;
+    }
+    .homeFooter .footerIcons { margin-bottom: 14px; }
+    .homeFooter .footerIcons a { margin: 0 6px; text-decoration: none; }
+    .socialIconBack { color: #e8f5e9; }
+    .socialIconTop  { color: #4CAF50; }
+    .homeFooter p { font-size: 1.35rem; color: #999; }
+    .homeFooter a { color: #4CAF50; text-decoration: none; }
+    .homeFooter a:hover { text-decoration: underline; }
+  </style>
+</head>
+
+<body>
+
+  <!-- Top nav -->
+  <div class="hero">
+    <nav class="topNav">
+      <a href="https://github.com/{{ site.github_username }}" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      <a href="mailto:{{ site.email_address }}"><i class="fas fa-envelope"></i> Contact</a>
+    </nav>
+
+    <!-- Hero -->
+    <div class="heroInner">
+      <div class="heroBrand">
+        <span class="dot"></span>
+        <span>{{ site.company_name }}</span>
+      </div>
+      <h1>Apps that make<br>life <span>better.</span></h1>
+      <p>{{ site.company_tagline }}</p>
+    </div>
+  </div>
+
+  <!-- SVG wave -->
+  <svg class="heroWave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 56" preserveAspectRatio="none" height="40">
+    <path fill="#1B5E20" d="M0,32 C360,60 1080,0 1440,32 L1440,0 L0,0 Z" opacity="0.15"/>
+    <path fill="#2E7D32" d="M0,40 C480,10 960,56 1440,24 L1440,0 L0,0 Z" opacity="0.1"/>
+  </svg>
+
+  <!-- Apps section -->
+  <div class="sectionLabel">
+    <h2>Our Apps</h2>
+    <div class="line"></div>
+  </div>
+
+  <div class="appsGrid">
+    {{ content }}
+  </div>
+
+  <!-- Footer -->
+  <footer class="homeFooter">
+    <div class="footerIcons">
+      <a href="https://github.com/{{ site.github_username }}" target="_blank">
+        <span class="fa-stack fa-1x">
+          <i class="socialIconBack fas fa-circle fa-stack-2x"></i>
+          <i class="socialIconTop fab fa-github fa-stack-1x"></i>
+        </span>
+      </a>
+      <a href="mailto:{{ site.email_address }}">
+        <span class="fa-stack fa-1x">
+          <i class="socialIconBack fas fa-circle fa-stack-2x"></i>
+          <i class="socialIconTop fas fa-envelope fa-stack-1x"></i>
+        </span>
+      </a>
+    </div>
+    <p>&copy; {{ 'now' | date: "%Y" }} <a href="{{ site.url }}{{ site.baseurl }}">{{ site.company_name }}</a> &nbsp;·&nbsp; Made with ❤️ in Nepal</p>
+  </footer>
+
+</body>
+</html>

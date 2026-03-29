@@ -1,113 +1,47 @@
-# Automatic App Landing Page
-**Create and deploy an iOS app landing page on GitHub Pages in only five minutes.**
+# ICT Solved – App Portfolio Site
 
-Designed for GitHub Pages for super easy set up. 
+Hosted at **https://ictsolved.github.io/apps/**
 
-🔧 Fork this repo
+Built with Jekyll. Deployed via GitHub Pages from the `master` branch of the `apps` repo.
 
-🗝 Enter iOS App ID in `_config.yml`
+## Local development
 
-📲 Upload video preview or screenshot
+```bash
+bundle install
+bundle exec jekyll serve
+# → http://localhost:4000/apps/
+```
 
-🎨 Customise site in `_config.yml` (no HTML/CSS)
+## Structure
 
-📝 Write Privacy Policy as markdown in `privacypolicy.md`
+```
+index.html                  # Portfolio home — add a card here for each new app
+consistency/
+  index.html                # App landing page (layout: app)
+  privacy.md                # Privacy policy (layout: page)
+assets/
+  apps/
+    consistency/
+      icon.png              # App icon (square, min 120×120)
+      screenshots/
+        home.png            # Screenshot shown in phone mockup
+_layouts/
+  home.html                 # Portfolio home layout
+  app.html                  # App landing layout
+  page.html                 # Markdown sub-page layout (privacy, etc.)
+```
 
-🕒 Keep a changelog in `CHANGELOG.md`
+## Adding a new app
 
-✅ Site becomes live at GitHub Pages repository URL, e.g. `https://your-username.github.io/your-repo-name/`.
+1. Create `your-app/index.html` using `layout: app` — copy `consistency/index.html` as a template and fill in front matter (app_name, features, playstore_link, screenshot, privacy_url).
+2. Create `your-app/privacy.md` using `layout: page` — copy `consistency/privacy.md` and update content.
+3. Add app icon and screenshot to `assets/apps/your-app/`.
+4. Add a card to `index.html`.
 
-<img src="https://emilbaehr.com/files/jayson1.png" width="440"> <img src="https://emilbaehr.com/files/slor1.png" width="440">
+## Deploy
 
-
-
-
-## Quick Start
-
-### Step 1: Fork this repo.
-After forking the repo, your site will be live immediately on your personal Github Pages account, e.g. `https://yourusername.github.io/your-repo-name/`.
-
-*Make sure GitHub Pages is enabled for your repo. It might take some time for the site to propagate entirely.*
-
-
-
-### Step 2: Enter iOS App ID in `_config.yml`
-Enter your iOS app ID in the `ios_app_id` field and commit your changes. Your site will automatically rebuild with your app icon, name, price and link to App Store.
-
-You can go on with customising almost anything in the `_config.yml` file. 
-
-Things you can customise in `_config.yml`:
-- App Name
-- App Icon
-- App Description
-- App Price
-- App Store Link
-- Play Store Link
-- Press Kit Download Link
-- Cover Image
-- Cover Overlay Color
-- Background Color
-- Text Colors
-- iPhone Device Color
-- Your Name / Company Name
-- Link to Website
-- Social Links and Contact Info
-- Feature List (Title, text, icon)
-
-
-
-### Step 3: Add screenshot or video
-
-#### Adding a screenshot
-Upload a `.png` or `.jpg` of your app to the folder `assets/screenshot/`. The name does not matter. Be sure to delete the placeholder `yourscreenshot.png`.
-
-#### Adding video
-Upload your video to the folder `assets/videos/`. To have support for most browsers, you need to upload two files – one for Safari and one for Chrome/Firefox.
-
-Video formats supported by Chrome and Firefox:
-- `.webm`
-- `.ogg`
-
-Video formats supported by Safari:
-- `.mp4`
-- `.mov`
-
-#### Resolutions
-The videos and screenshots must have one of the following resolutions:
-- 828x1792
-- 1125x2436
-- 1242x2688
-
-
-
-### Step 4: Edit (or remove) Privacy Policy and Changelog
-Your site automatically includes pages for a Privacy Policy and a Changelog. Change the content of these pages by editing the `privacypolicy.md` and `CHANGELOG.md` files in the `_pages` directory.
-
-In each of the markdown files, you can set the `include_in_header:` value to either `true` or `false`. This determines if the page is included in the top navigation.
-By default, only the Changelog is included in the top navigation. The title of the navigation item can also be edited, by editing the `title:` in each markdown file.
-
-If you need to, you can create additional markdown based pages just by creating an `.md` file like the `privacypolicy.md` and `CHANGELOG.md` files in the `_pages` directory.
-
-**Please note:** The Privacy Policy and Changelog provided are written using dummy text, so please adapt each of them for your own app.
-You can also choose not to include these pages, by simple deleting the `privacypolicy.md` and `CHANGELOG.md` files.
-
-
-
-
-## Feedback
-If you have feedback regarding bugs or improvements, open an issue, @ me on Twitter or write me an email. You can find my contact info on my website.
-
-I'd love to see the sites you create using this little tool.
+Push to the `apps` repo on GitHub (`ictsolved/apps`). GitHub Pages will build and publish automatically.
 
 ## Credits
-- [Jekyll](https://github.com/jekyll/jekyll)
-- [FontAwesome](https://fontawesome.github.io/Font-Awesome/)
 
-## Donations
-[Donations are welcome](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=S8ZZT3JXJPN92&currency_code=USD&source=url)
-
-## Author
-[Emil Baehr](https://emilbaehr.com/)
-
-## License
-[MIT License](LICENSE)
+Phone mockup and original single-app Jekyll template by [Emil Baehr](https://emilbaehr.github.io/automatic-app-landing-page/). Substantially restructured into a multi-app portfolio with custom layouts, Sass module migration, and SEO improvements.

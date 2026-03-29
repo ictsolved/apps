@@ -1,2 +1,5 @@
 source "https://rubygems.org"
-gem 'github-pages'
+
+gem 'jekyll', '~> 4.4'
+gem 'kramdown-parser-gfm'
+gem 'webrick'  # required for Ruby 3+
