@@ -1,4 +1,4 @@
-# ICT Solved – App Portfolio Site
+# ICT Solved! – App Portfolio Site
 
 Hosted at **https://ictsolved.github.io/apps/**
 

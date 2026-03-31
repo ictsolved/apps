@@ -12,7 +12,7 @@ include_in_header: false
 
 # Privacy Policy
 
-This Privacy Policy describes how **ICT Solved** ("we", "us", or "our") handles your information when you use the **Consistency** habit tracker app ("App").
+This Privacy Policy describes how **ICT Solved!** ("we", "us", or "our") handles your information when you use the **Consistency** habit tracker app ("App").
 
 ---
 
@@ -107,6 +107,6 @@ We may update this policy from time to time. Any changes will be posted on this 
 
 If you have any questions about this Privacy Policy, please contact us:
 
-**ICT Solved**
+**ICT Solved!**
 Email: [ictsimplified@gmail.com](mailto:ictsimplified@gmail.com)
 GitHub: [github.com/ictsolved](https://github.com/ictsolved)
