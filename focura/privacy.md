@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Privacy Policy — Ekagra
-permalink: /ekagra/privacy
-app_name: Ekagra
-app_icon: assets/apps/ekagra/icon.png
-app_url: /ekagra
+title: Privacy Policy — Focura
+permalink: /focura/privacy
+app_name: Focura
+app_icon: assets/apps/focura/icon.png
+app_url: /focura
 include_in_header: false
 ---
 
@@ -12,7 +12,7 @@ include_in_header: false
 
 # Privacy Policy
 
-This Privacy Policy describes how **ICT Solved!** ("we", "us", "our") handles your information when you use the **Ekagra** deep focus app ("App").
+This Privacy Policy describes how **ICT Solved!** ("we", "us", "our") handles your information when you use the **Focura** deep focus app ("App").
 
 ---
 
@@ -87,7 +87,7 @@ You may at any time:
 - **Delete all local data** via Settings → Reset All Data
 - **Disable cloud sync** by signing out via Settings → Sign out
 - **Opt out of personalized ads** via your device's ad settings
-- **Request account or data deletion** — see our [Account & Data Deletion page](/apps/ekagra/delete-account) for step-by-step instructions, or contact us at [ictsimplified@gmail.com](mailto:ictsimplified@gmail.com)
+- **Request account or data deletion** — see our [Account & Data Deletion page](/apps/focura/delete-account) for step-by-step instructions, or contact us at [ictsimplified@gmail.com](mailto:ictsimplified@gmail.com)
 
 ---
 
