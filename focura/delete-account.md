@@ -11,7 +11,7 @@ include_in_header: false
 
 # Delete Account & Data
 
-**App:** Focura – Deep Focus System
+**App:** Focura – Deep Focus
 **Developer:** ICT Solved!
 
 ---
