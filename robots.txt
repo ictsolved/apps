@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ictsolved.github.io/apps/sitemap.xml
