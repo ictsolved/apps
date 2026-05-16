@@ -59,7 +59,13 @@ If you enable match notifications, we use **Firebase Cloud Messaging** (Google L
 We use **Firebase Remote Config** (Google LLC) to adjust App settings (such as ad refresh rates) without a full app update. No personal data is collected via Remote Config.
 
 ### 1.8 Advertising
-The App displays ads served by **Google AdMob** (Google LLC). AdMob may collect your advertising ID and use it to show relevant ads. You can opt out of personalized advertising in your device settings under **Google > Ads**.
+The App displays ads served by **Google AdMob** (Google LLC). AdMob may collect your advertising ID and device information to serve ads.
+
+- **Personalized ads** are shown only where you have given consent (EEA, UK, Switzerland) or where no consent is required (most regions).
+- **Non-personalized ads** are shown if you decline consent or opt out — you still see ads, but they are not based on your interests.
+- **EEA / UK / Swiss users:** On first launch, a consent form is shown via Google's User Messaging Platform (UMP). You can change your choice at any time via **About → Privacy Options** in the App.
+- **US state users (California, Virginia, Colorado, etc.):** You may opt out of the sharing of your personal information for advertising purposes via **About → Privacy Options** in the App.
+- All other users may opt out of personalized advertising in your device settings under **Google > Ads > Opt out of Ads Personalization**.
 
 ---
 
@@ -97,7 +103,13 @@ The App also retrieves publicly available football data from **football-data.org
 
 ---
 
-## 4. Data Retention
+## 4. International Data Transfers
+
+Our third-party services (Firebase, Google AdMob) are operated by Google LLC, based in the United States. If you are located in the EEA, UK, or Switzerland, your data may be transferred to and processed in the US. Google LLC participates in and certifies compliance with applicable data transfer frameworks (including EU Standard Contractual Clauses). See [policies.google.com/privacy](https://policies.google.com/privacy) for details.
+
+---
+
+## 5. Data Retention
 
 - **Account and server data** (predictions, points, leaderboard, quiz answers, watchlist) is retained on our servers for as long as your account exists. Deleting your account removes all of this data permanently.
 - **Local settings** remain on your device until you uninstall the App or clear its data in your device settings.
@@ -107,29 +119,50 @@ The App also retrieves publicly available football data from **football-data.org
 
 ---
 
-## 5. Your Rights
+## 6. Your Rights
 
 You may at any time:
 - **Delete your account and all associated data** — via **Fan Zone → My Zone → Delete account** in the App, or see our [Account Deletion page](/apps/goalpulse/delete-account)
 - **Disable push notifications** in the App's notification settings or your device settings
-- **Opt out of personalized ads** via your device's ad settings (Google > Ads > Opt out of Ads Personalization)
+- **Manage ad privacy choices** — via **About → Privacy Options** in the App
+- **Opt out of personalized ads** via your device settings (Google > Ads > Opt out of Ads Personalization)
 - **Contact us** with any data-related request at [ictsimplified@gmail.com](mailto:ictsimplified@gmail.com)
+
+### 6.1 EEA, UK & Switzerland (GDPR)
+If you are located in the European Economic Area, United Kingdom, or Switzerland, you have the right to:
+- **Access** the personal data we hold about you
+- **Rectify** inaccurate personal data
+- **Erase** your personal data ("right to be forgotten")
+- **Restrict** or **object** to processing of your personal data
+- **Withdraw consent** for personalized advertising at any time via **About → Privacy Options**
+- **Lodge a complaint** with your local data protection supervisory authority
+
+The legal basis for processing your data is: **consent** (personalized advertising), **contract performance** (account features, predictions, leaderboard), and **legitimate interests** (crash reporting, app improvement via analytics).
+
+### 6.2 US State Residents (CCPA / CPRA and similar)
+If you are a resident of California, Virginia, Colorado, Connecticut, or another US state with applicable privacy laws, you have the right to:
+- **Know** what personal information we collect and how it is used
+- **Delete** your personal information (via account deletion in the App)
+- **Opt out** of the sale or sharing of your personal information for cross-context behavioral advertising — via **About → Privacy Options** in the App
+- **Non-discrimination** — we will not treat you differently for exercising your privacy rights
+
+We do **not sell** your personal information for money. "Sharing" in the CCPA sense refers to sharing your advertising ID with AdMob for targeted advertising, which you can opt out of as described above.
 
 ---
 
-## 6. Children's Privacy
+## 7. Children's Privacy
 
 The App is not directed at children under the age of 13. We do not knowingly collect personal information from children.
 
 ---
 
-## 7. Changes to This Policy
+## 8. Changes to This Policy
 
 We may update this policy from time to time. Any changes will be posted on this page with an updated "Last updated" date. Continued use of the App after changes constitutes acceptance.
 
 ---
 
-## 8. Contact
+## 9. Contact
 
 If you have any questions about this Privacy Policy, please contact us:
 
