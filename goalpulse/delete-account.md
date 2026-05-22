@@ -6,6 +6,7 @@ app_name: GoalPulse
 app_icon: assets/apps/goalpulse/icon.png
 app_url: /goalpulse
 include_in_header: false
+sitemap: false
 ---
 
 # Delete Account & Data

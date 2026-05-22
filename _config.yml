@@ -52,9 +52,4 @@ exclude:
   - Gemfile.lock
   - vendor/
 
-collections:
-  pages:
-    output: true
-    permalink: /:path
-
 markdown: kramdown

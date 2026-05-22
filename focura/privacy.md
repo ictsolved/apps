@@ -6,6 +6,7 @@ app_name: Focura
 app_icon: assets/apps/focura/icon.png
 app_url: /focura
 include_in_header: false
+description: Privacy Policy for Focura — the free gamified focus timer for Android by ICT Solved. Learn about data collection, ads, and your privacy rights.
 ---
 
 **Last updated:** April 17, 2026

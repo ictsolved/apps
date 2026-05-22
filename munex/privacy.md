@@ -6,6 +6,7 @@ app_name: Munex
 app_icon: assets/apps/munex/munex-logo.png
 app_url: /munex
 include_in_header: false
+description: Privacy Policy for Munex — the free budgeting app for irregular income by ICT Solved. Learn how your financial data is stored, protected, and never sold.
 ---
 
 **Last updated:** May 9, 2026

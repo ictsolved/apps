@@ -7,6 +7,7 @@ app_icon: assets/apps/focura/icon.png
 screenshot: assets/apps/focura/screenshots/focura-screenshot.jpg
 app_url: /focura
 include_in_header: false
+sitemap: false
 ---
 
 # Delete Account & Data

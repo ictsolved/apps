@@ -26,6 +26,7 @@
 <meta property="og:description" content="{{ seo_description }}">
 <meta property="og:url"         content="{{ seo_url }}">
 <meta property="og:image"       content="{{ seo_image }}">
+<meta property="og:image:alt"   content="{{ seo_title }} — {{ site.company_name }}">
 <meta property="og:locale"      content="en_US">
 
 <!-- Twitter Card -->
@@ -52,8 +53,9 @@
   "operatingSystem": "Android{% if page.appstore_link %}, iOS{% endif %}",
   "applicationCategory": "{{ page.schema_category | default: 'UtilitiesApplication' }}",
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-  {% if page.playstore_link %}"installUrl": "{{ page.playstore_link }}",{% endif %}
+  {% if page.playstore_link %}"downloadUrl": "{{ page.playstore_link }}",{% endif %}
   {% if page.privacy_url %}"privacyPolicy": "{{ site.url }}{{ site.baseurl }}{{ page.privacy_url }}",{% endif %}
+  {% if page.rating_value and page.rating_count %}"aggregateRating": { "@type": "AggregateRating", "ratingValue": "{{ page.rating_value }}", "ratingCount": "{{ page.rating_count }}", "bestRating": "5", "worstRating": "1" },{% endif %}
   "inLanguage": "en",
   "image": "{{ seo_image }}",
   "author": {

@@ -6,6 +6,7 @@ app_name: Munex
 app_icon: assets/apps/munex/munex-logo.png
 app_url: /munex
 include_in_header: false
+sitemap: false
 ---
 
 # Delete Account & Data

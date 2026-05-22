@@ -6,6 +6,7 @@ app_name: GoalPulse
 app_icon: assets/apps/goalpulse/icon.png
 app_url: /goalpulse
 include_in_header: false
+description: Privacy Policy for GoalPulse — the free FIFA World Cup 2026 Android app by ICT Solved. Learn what data we collect, how it is used, and your rights.
 ---
 
 **Last updated:** May 16, 2026

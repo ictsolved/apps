@@ -5,7 +5,6 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <base target="_blank">
   <title>{{ page.app_name }} — {{ site.company_name }}</title>
   <meta name="description" content="{{ page.app_description }}">
   {% if page.app_icon %}<link rel="shortcut icon" href="{{ page.app_icon | relative_url }}">{% endif %}
@@ -31,7 +30,7 @@
                 </defs>
               </svg>
               <a href="{{ site.baseurl }}" target="_self">
-                {% if page.app_icon %}<img class="headerIcon" src="{{ page.app_icon | relative_url }}">{% endif %}
+                {% if page.app_icon %}<img class="headerIcon" src="{{ page.app_icon | relative_url }}" alt="{{ page.app_name }} icon">{% endif %}
               </a>
               <div class="divider"></div>
             </div>
@@ -74,7 +73,7 @@
                 </clipPath>
               </defs>
             </svg>
-            {% if page.app_icon %}<img class="appIconLarge" src="{{ page.app_icon | relative_url }}">{% endif %}
+            {% if page.app_icon %}<img class="appIconLarge" src="{{ page.app_icon | relative_url }}" alt="{{ page.app_name }} app icon">{% endif %}
           </div>
           <div class="appNamePriceContainer">
             <h1 class="appName">{{ page.app_name }}</h1>
@@ -101,7 +100,7 @@
             <div>
               <span class="fa-stack fa-1x">
                 <i class="iconBack fas fa-circle fa-stack-2x"></i>
-                <i class="iconTop fas fa-{{ feature.fontawesome_icon_name }} fa-stack-1x"></i>
+                <i class="iconTop {{ feature.fontawesome_icon_prefix | default: 'fas' }} fa-{{ feature.fontawesome_icon_name }} fa-stack-1x"></i>
               </span>
             </div>
             <div class="featureText">

@@ -6,6 +6,7 @@ app_name : Consistency
 app_icon : assets/apps/consistency/icon.png
 app_url  : /consistency
 include_in_header: false
+sitemap: false
 ---
 
 # Delete Account & Data
