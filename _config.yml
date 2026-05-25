@@ -53,3 +53,6 @@ exclude:
   - vendor/
 
 markdown: kramdown
+
+plugins:
+  - jekyll-sitemap
