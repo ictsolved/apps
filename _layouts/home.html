@@ -102,7 +102,7 @@
     }
 
     /* ── Wave divider ── */
-    .heroWave { display: block; margin-top: -2px; background: #f5f7f5; }
+    .heroWave { display: block; width: 100%; margin-top: -2px; background: #f5f7f5; }
 
     /* ── Section label ── */
     .sectionLabel {
@@ -128,7 +128,7 @@
       margin: 0 auto 64px;
       padding: 0 24px;
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr));
       gap: 28px;
     }
 
